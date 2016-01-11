@@ -1,0 +1,27 @@
+{
+  "name": "npm-like-im-5",
+  "version": "1.0.0",
+  "description": "no need for fancy words, here's a simple intro to npm",
+  "main": "index.js",
+  "scripts": {
+    "start": "gitbook serve",
+    "build": "gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/npm-like-im-5.git"
+  },
+  "keywords": [
+    "npm",
+    "education"
+  ],
+  "author": "ag_dubs <ashley@npmjs.com> (https://ashleygwilliams.github.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/npm-like-im-5/issues"
+  },
+  "homepage": "https://github.com/npm/npm-like-im-5#readme",
+  "devDependencies": {
+    "gitbook-cli": "^1.0.1"
+  }
+}
