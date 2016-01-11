@@ -6,6 +6,19 @@ This book contains the curriculum for a 6hr introduction to
 npm designed to be appropriate for a classically "non-technical"
 audience.
 
+## What's This Book About?
+
+The goal of this book is to give you a solid foundation in npm
+practices and concepts. The focus is both practical and theoretical;
+this book takes the stance that knowing how __and why__ to do 
+something is critical to successfully using any technology.
+
+Additionally, this book hopes to reveal some of the motivation of
+why npm has developed the way it has. Understanding the 
+reasoning behind specific features and implementations will help
+you employ the myriad features npm offers at the right time, as
+well as help you debug, should you run into trouble.
+
 There are 8 chapters included:
 
 - Introduction
