@@ -53,7 +53,7 @@
         data-chapter-title="What is npm?"
         data-filepath="intro/what-is-npm.md"
         data-basepath=".."
-        data-revision="Sun Jan 31 2016 16:17:39 GMT+0000 (UTC)"
+        data-revision="Sun Jan 31 2016 19:12:08 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -794,6 +794,53 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="what-is-npm">What is npm?</h1>
+<p>npm is the package manager for JavaScript. It has two
+primary goals:</p>
+<ul>
+<li>put code in a place where it can easily be used</li>
+<li>manage differences in dependency versions</li>
+</ul>
+<p>npm accomplishes this by managing 3 primary products:</p>
+<ul>
+<li>the CLI</li>
+<li>the registry</li>
+<li>the website</li>
+</ul>
+<h2 id="the-cli">The CLI</h2>
+<p>npm&apos;s CLI, or Command Line Interface, is an installed program that allows
+users to interact with a registry via their terminal. This is by far the most well-known and used npm product.</p>
+<h2 id="the-registry">The Registry</h2>
+<p>npm&apos;s registry is, arguably, the most valuable asset that npm has.
+The registry is a database (actually serveral databases!) that contains
+all package data and meta-data.</p>
+<p>When one types <code>npm install</code> (among other things!) a request is made to
+the registry. </p>
+<p>It is possible to use the npm CLI with <em>any</em> registry. The npm registry
+is simply the default.</p>
+<h3 id="npm-onsite">npm Onsite</h3>
+<p>npm OnSite is a paid product by which npm provides customers
+with a fully replicated version of the public registry for use
+behind company firewalls.</p>
+<h2 id="the-website">The Website</h2>
+<p>The website is npm&apos;s home on the World Wide Web. It has two primary goals:</p>
+<ul>
+<li>display package READMEs</li>
+<li>allow users to manage package permissions via Orgs and Teams</li>
+</ul>
+<h3 id="package-readmes">Package READMEs</h3>
+<p>The primary function of the website is to allow users to search
+for packages and read information on them. Information on each
+package is found in a <code>README.md</code> file in the root directory of
+the package repository (often, GitHub).</p>
+<p>npm uses a package called <a href="https://github.com/npm/marky-markdown" target="_blank"><code>marky-markdown</code></a> to parse package <code>README</code>s
+and displays it on the website. It attempts to parse and display the
+files exactly as GitHub does, but currently is not.
+there.</p>
+<h3 id="orgs-and-teams">Orgs and Teams</h3>
+<p>As of last November, npm offers a new service called <a href="https://docs.npmjs.com/orgs/what-are-orgs" target="_blank">&quot;Orgs and Teams&quot;</a>
+which grants users the ability to manage permissions to packages.</p>
+<p>This is currently only a paid product, but an open source tier will be
+available in the future.</p>
 
                     
                     </section>

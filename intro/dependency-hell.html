@@ -53,7 +53,7 @@
         data-chapter-title="Package Managers and Dependency Hell"
         data-filepath="intro/dependency-hell.md"
         data-basepath=".."
-        data-revision="Sun Jan 31 2016 16:17:39 GMT+0000 (UTC)"
+        data-revision="Sun Jan 31 2016 19:12:08 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -794,6 +794,20 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="package-managers-and-dependency-hell">Package Managers and Dependency Hell</h1>
+<p>Imagine there are three modules: A, B, and C. A requires
+B at v1.0, and C also requires B, but at v2.0. We can
+visualize this like so:</p>
+<p><img src="images/how-npm-works/deps1.png" alt="2 modules need B"></p>
+<p>Now, let&apos;s create an application that requires both module
+A and module C.</p>
+<p><img src="images/how-npm-works/deps2.png" alt="My app needs both A and C"></p>
+<h2 id="dependency-hell">Dependency Hell</h2>
+<p>A package manager would need to provide a version of
+module B. In all other runtimes prior to Node.js, this is
+what a package manager would try to do. This is dependency hell:</p>
+<p><img src="images/how-npm-works/deps3.png" alt="Dependency Hell"></p>
+<p>Instead of attempting to resolve module B to a single version,
+npm puts both versions of module B into the tree.</p>
 
                     
                     </section>
