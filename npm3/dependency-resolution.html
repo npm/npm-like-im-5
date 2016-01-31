@@ -8,7 +8,7 @@
         <title>Dependency Resolution | npm-like-im-5</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -53,7 +53,7 @@
         data-chapter-title="Dependency Resolution"
         data-filepath="npm3/dependency-resolution.md"
         data-basepath=".."
-        data-revision="Mon Jan 11 2016 17:53:24 GMT+0000 (UTC)"
+        data-revision="Sun Jan 31 2016 16:17:29 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -224,10 +224,10 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="npm/non-determinism.html">
+        <li class="chapter " data-level="2.3" data-path="npm3/non-determinism.html">
             
                 
-                    <a href="../npm/non-determinism.html">
+                    <a href="../npm3/non-determinism.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -794,6 +794,43 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="dependency-resolution">Dependency Resolution</h1>
+<p>npm3 resolves dependencies differently than npm2. </p>
+<p>While npm2 installs all dependencies in a nested way, npm3 tries to
+mitigate the deep trees and redundancy that such nesting causes. npm3
+attempts this by installing some secondary dependencies (dependencies
+of dependencies) in a flat way, in the same directory as the primary
+dependency that requires it.</p>
+<p>The key major differences are: </p>
+<ul>
+<li>position in the directory structure no longer predicts the type
+(primary, secondary, etc) a dependency is</li>
+<li>dependency resolution depends on <em>install order</em>, or the order
+in which things are installed will change the <code>node_modules</code>
+directory tree structure </li>
+</ul>
+<p>Imagine we have a module, A. A requires B.</p>
+<p><img src="images/npm3deps1.png" alt="A depends on B"></p>
+<p>Now, let&apos;s create an application that requires module A.</p>
+<p>On <code>npm install</code>, npm v3 will install both module A and its
+dependency, module B, inside the <code>/node_modules</code> directory, flat.</p>
+<p>In npm v2 this would have happened in a nested way.</p>
+<p><img src="images/npm3deps2.png" alt="npm2 vs 3"></p>
+<p>Now, let&apos;s say we want to require another module, C. C requires B,
+but at another version than A.</p>
+<p><img src="images/npm3deps3.png" alt="new module dep, C"></p>
+<p>However, since B v1.0 is already a top-level dep, we cannot install
+B v2.0 as a top level dependency. npm v3 handles this by defaulting
+to npm v2 behavior and nesting the new, different, module B version
+dependency under the module that requires it -- in this case, module C.</p>
+<p><img src="images/npm3deps4.png" alt="nested dep"></p>
+<p>In the terminal, this looks like this:</p>
+<p><img src="images/tree.png" alt="tree"></p>
+<p>You can list the dependencies and still see their relationships using
+<code>npm ls</code>:</p>
+<p><img src="images/npmls.png" alt="npmls"></p>
+<p>If you want to just see your primary dependencies, you can use:</p>
+<pre><code>npm ls --depth=0
+</code></pre><p><img src="images/npmlsdepth0.png" alt="npmlsdepth0"></p>
 
                     
                     </section>

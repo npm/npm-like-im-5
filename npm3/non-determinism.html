@@ -8,7 +8,7 @@
         <title>Non-determinism | npm-like-im-5</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -51,9 +51,9 @@
     <div class="book"
         data-level="2.3"
         data-chapter-title="Non-determinism"
-        data-filepath="npm/non-determinism.md"
+        data-filepath="npm3/non-determinism.md"
         data-basepath=".."
-        data-revision="Mon Jan 11 2016 17:53:24 GMT+0000 (UTC)"
+        data-revision="Sun Jan 31 2016 16:17:29 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -224,10 +224,10 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="npm/non-determinism.html">
+        <li class="chapter active" data-level="2.3" data-path="npm3/non-determinism.html">
             
                 
-                    <a href="../npm/non-determinism.html">
+                    <a href="../npm3/non-determinism.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -794,6 +794,120 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="nondeterminism">Non-determinism</h1>
+<p>As stated a few pages back in our example:</p>
+<p><img src="images/install-order.png" alt="install order"></p>
+<p>If you, and your development team, use a <code>package.json</code>, as well
+as the interactive <code>npm install</code> command to add pkgs (like most
+teams using npm do), it is likely that you will run into a situation
+where your local <code>node_modules</code> directory will differ from both
+your coworkers&apos; <code>node_modules</code> directories, as well as the <code>node_modules</code>
+directories on your staging, testing, or production servers.</p>
+<p>In short? <strong>npm3 does not install dependencies in a deterministic way.</strong></p>
+<p>That&apos;s probably not a comforting statement to read, but in this article
+we&apos;ll discuss why this happens, as well as assure you that it has no
+implications for your application, as well as explain the steps to
+reliably (re)create a single, consistent, <code>node_modules</code> directory, should
+you want to do that.</p>
+<h2 id="example">Example</h2>
+<p>Let&apos;s jump back to an example application from a few examples ago:</p>
+<p><img src="images/npm3deps8.png" alt="app"></p>
+<p>In this example, our app has the following <code>package.json</code>:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;example3&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;dependencies&quot;: {
+    &quot;mod-a&quot;: &quot;^1.0.0&quot;,
+    &quot;mod-c&quot;: &quot;^1.0.0&quot;,
+    &quot;mod-d&quot;: &quot;^1.0.0&quot;,
+    &quot;mod-e&quot;: &quot;^1.0.0&quot;
+  }
+}
+</code></pre><p>On an <code>npm install</code> we will see this in our terminal:</p>
+<p><img src="images/npm3deps14.png" alt="npm install"></p>
+<p>Now, let&apos;s say a developer on our team decides to complete a feature that
+requires that they update Module A to v2.0, which now has a dependency on
+Module B v2.0, instead of, as previously, Module B v1.0.</p>
+<p><img src="images/npm3deps9.png" alt="module a v2"></p>
+<p>Our developer uses the interactive <code>npm install</code> command to install the new
+version of Module A, and save it to the <code>package.json</code>:</p>
+<pre><code>npm install mod-a@2 --save
+</code></pre><p>The terminal outputs this:</p>
+<p><img src="images/npm3deps15.png" alt="interactive install mod a"></p>
+<p>We now have something that looks like this:</p>
+<p><img src="images/npm3deps10.png" alt="tree with mod a v2 interactive"></p>
+<p>Now let&apos;s say that our developer finished the feature requiring the new 
+version of Module A and pushes the application to a testing server
+that runs <code>npm install</code> on the new <code>package.json</code>:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;example3&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;dependencies&quot;: {
+    &quot;mod-a&quot;: &quot;^2.0.0&quot;,
+    &quot;mod-c&quot;: &quot;^1.0.0&quot;,
+    &quot;mod-d&quot;: &quot;^1.0.0&quot;,
+    &quot;mod-e&quot;: &quot;^1.0.0&quot;
+  }
+}
+</code></pre><p>The testing server&apos;s log shows this:</p>
+<p><img src="images/npm3deps16.png" alt="tree with mod a v2 packagejson"></p>
+<p>Which, when visualized, looks like this:</p>
+<p><img src="images/npm3deps17.png" alt="totally diff dep tree"></p>
+<p>Whoa, what?! This tree is completely different than the tree that
+exists on our developer&apos;s local machine. What happened?</p>
+<p><strong>Remember: install order matters.</strong></p>
+<p>When our developer updated Module A using the interactive <code>npm install</code>
+Module A v2.0 was functionally the <strong>last</strong> package installed. Because
+our developer had done an <code>npm install</code> when they first started working
+on the project, all modules listed in the <code>package.json</code> were already
+installed in the <code>node_modules</code> folder. <strong>Then</strong> Module A v2.0 was 
+installed.</p>
+<p>It follows, then, that Module Bv1.0, a top level dependency because of
+Module A v1.0, then anchored by Module E v1.0, remains a top level
+dependency. Because Module Bv1.0 occupies the top-level, no other version
+of Module B can-- therefore, Module Bv2.0 remains a nested dependency
+under Module C v1.0 and Module D v1.0, and becomes a nested dependency
+for the new Module A v2.0 dependency.</p>
+<p>Let&apos;s consider what happened on the testing server. The project was pulled
+into a fresh directory, i.e. does not have a pre-existing <code>node_modules</code>
+directory. Then <code>npm install</code> is run, perhaps by a deploy script, to install
+dependencies from the <code>package.json</code>.</p>
+<p>This <code>package.json</code> now has Module A v2.0 listed in it, and thanks to
+alphabetical order (enforced by the <code>npm install</code> command), is now installed
+<strong>first</strong>, instead of <strong>last</strong>.</p>
+<p>When Module A v2.0 is installed first, in a clear <code>node_modules</code> directory, its
+dependencies are the <strong>first candidates</strong> for the top-level position. As a result,
+Module B v2.0 is installed in the top-level of the <code>node_modules</code> directory.</p>
+<p>Now, when it is time to install Module E v1.0, its dependency, Module B v1.0,
+cannot occupy the top-level of the <code>node_modules</code> directory, because Module B v2.0
+is already there. Therefore, it is nested under Module E v1.0.</p>
+<h2 id="do-different-dependency-tree-structures-affect-my-app">Do different dependency tree structures affect my app?</h2>
+<p>No! Even though the trees are different, both sufficiently install and point
+all your dependencies at all their dependencies, and so on, down the tree.
+You still have everything you need, it just happens to be in a different
+configuration.</p>
+<h2 id="i-want-my-nodemodules-directory-to-be-the-same-how-can-i-do-that">I want my <code>node_modules</code> directory to be the same. How can I do that?</h2>
+<p>The <code>npm install</code> command, when used exclusively to install packages from a
+<code>package.json</code>, will <strong>always produce the same tree</strong>. This is because install order
+from a <code>package.json</code> is <strong>always</strong> alphabetical. Same install order means that
+you will get the same tree.</p>
+<p>You can reliably get the same dependency tree by removing your <code>node_modules</code>
+directory and running <code>npm install</code> whenever you make a change to your <code>package.json</code>.</p>
 
                     
                     </section>
