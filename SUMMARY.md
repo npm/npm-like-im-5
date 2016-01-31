@@ -12,7 +12,6 @@
   * [Non-determinism](npm3/non-determinism.md)
 * [Up and Running](up-and-running/README.md)
   * [Installing Node.js and npm](up-and-running/installation.md)
-  * [Updating npm](up-and-running/updating.md)
   * [Exercise 1: Changing versions of npm](up-and-running/exercise1.md)
 * [Using Packages](using-packages/README.md)
   * [The Registry](using-packages/registry.md)
