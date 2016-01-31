@@ -9,7 +9,7 @@
 * [Hello, npm!](npm3/README.md)
   * [Dependency Resolution](npm3/dependency-resolution.md)
   * [Duplication and Deduping](npm3/duplication.md)
-  * [Non-determinism](npm/non-determinism.md)
+  * [Non-determinism](npm3/non-determinism.md)
 * [Up and Running](up-and-running/README.md)
   * [Installing Node.js and npm](up-and-running/installation.md)
   * [Updating npm](up-and-running/updating.md)
