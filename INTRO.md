@@ -21,7 +21,7 @@ well as help you debug, should you run into trouble.
 
 There are 8 chapters included:
 
-### 1. [Introduction](/introduction)
+### 1. [Introduction](/intro)
 
   We'll kick off our class by introducing npm and npm, Inc.
   From there, we'll talk about **dependency hell** and how
