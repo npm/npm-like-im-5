@@ -37,7 +37,7 @@
         
     
     
-    <link rel="next" href="../using-packages/exercise2.html" />
+    <link rel="next" href="../using-packages/node.html" />
     
     
     <link rel="prev" href="../using-packages/registry.html" />
@@ -53,7 +53,7 @@
         data-chapter-title="Installing Packages"
         data-filepath="using-packages/installing.md"
         data-basepath=".."
-        data-revision="Tue Feb 02 2016 06:12:32 GMT+0000 (UTC)"
+        data-revision="Tue Feb 02 2016 21:03:13 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -341,31 +341,31 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="using-packages/exercise2.html">
+        <li class="chapter " data-level="4.3" data-path="using-packages/node.html">
+            
+                
+                    <a href="../using-packages/node.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Using npm Packages with Node.js
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="using-packages/exercise2.html">
             
                 
                     <a href="../using-packages/exercise2.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.3.</b>
-                        
-                        Exercise 2: Installing Packages Locally and Globally
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="using-packages/local-mgmt.html">
-            
-                
-                    <a href="../using-packages/local-mgmt.html">
-                
-                        <i class="fa fa-check"></i>
-                        
                             <b>4.4.</b>
                         
-                        Local Package Management
+                        Exercise 2: Installing and Using Packages in Node.js
                     </a>
             
             
@@ -779,7 +779,37 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="installing-packages">Installing Packages</h1>
-
+<p>In order to use packages from the registry we must <strong>install</strong> them.
+Recall that the primary goal of npm is to put pieces of code in the
+right place for Node.js to use. That&apos;s exactly what installing does.</p>
+<h2 id="the-npm-install-cli-command">The <code>npm install</code> CLI command</h2>
+<p>The CLI command to install a package is:</p>
+<pre><code>npm install &lt;package-name&gt;@&lt;version&gt;
+</code></pre><p>... where <code>package-name</code> is the name of the package, and <code>version</code>
+is the version number you would like to install. Version number is 
+optional. If you don&apos;t pass it, npm will simply install the most recent 
+published version.</p>
+<p>A shortcut for this:</p>
+<pre><code>npm i &lt;package-name&gt;@&lt;version&gt;
+</code></pre><p>For example, if I wanted to install <code>mod-a</code> I would type:</p>
+<pre><code>npm install mod-a
+</code></pre><p>..which would install <code>mod-a</code> at the most recent version.</p>
+<p>If I wanted to install <code>mod-a</code> but specifically version <code>1.0</code> I would
+type:</p>
+<pre><code>npm install mod-a@1.0
+</code></pre><h2 id="the-nodemodules-directory">The <code>node_modules</code> directory</h2>
+<p>When we run the <code>npm install</code> command npm will go to the Registry and
+fetch the package you request. It will then take that package and place
+it in a directory called <code>node_modules</code>.</p>
+<p>For example, let&apos;s say I have a directory called <code>my-project</code>. In my
+terminal, inside that directory, I run:</p>
+<pre><code>$ ~/Projects/my-project/&gt;  npm install mod-a@1.0
+</code></pre><p>... npm will go to the Registry and install <code>mod-a</code> here:</p>
+<pre><code>Projects
+|- my-project
+  |- node_modules
+    |- mod-a         # package data is here
+</code></pre>
                     
                     </section>
                 
@@ -792,7 +822,7 @@
         <a href="../using-packages/registry.html" class="navigation navigation-prev " aria-label="Previous page: The Registry"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../using-packages/exercise2.html" class="navigation navigation-next " aria-label="Next page: Exercise 2: Installing Packages Locally and Globally"><i class="fa fa-angle-right"></i></a>
+        <a href="../using-packages/node.html" class="navigation navigation-next " aria-label="Next page: Using npm Packages with Node.js"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

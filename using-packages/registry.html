@@ -53,7 +53,7 @@
         data-chapter-title="The Registry"
         data-filepath="using-packages/registry.md"
         data-basepath=".."
-        data-revision="Tue Feb 02 2016 06:12:32 GMT+0000 (UTC)"
+        data-revision="Tue Feb 02 2016 21:03:13 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -341,31 +341,31 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="using-packages/exercise2.html">
+        <li class="chapter " data-level="4.3" data-path="using-packages/node.html">
+            
+                
+                    <a href="../using-packages/node.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Using npm Packages with Node.js
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="using-packages/exercise2.html">
             
                 
                     <a href="../using-packages/exercise2.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.3.</b>
-                        
-                        Exercise 2: Installing Packages Locally and Globally
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="using-packages/local-mgmt.html">
-            
-                
-                    <a href="../using-packages/local-mgmt.html">
-                
-                        <i class="fa fa-check"></i>
-                        
                             <b>4.4.</b>
                         
-                        Local Package Management
+                        Exercise 2: Installing and Using Packages in Node.js
                     </a>
             
             
@@ -779,6 +779,27 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="the-registry">The Registry</h1>
+<p>The registry is the name of the location that all packages published
+to npm live. Public, private, scoped, all packages live in the 
+registry, and this fact is one of the most valuable propositions npm
+has.</p>
+<h2 id="how-the-registry-works">How the Registry works</h2>
+<p>The registry is a collection of databases and services that allows
+users to read, store, and update packages. When using the CLI, the
+registry will check one or all of the following things:</p>
+<ul>
+<li>does this user have permission to read/write to this package</li>
+<li>does this package name (already) exist</li>
+<li>does this version of a package (already) exist</li>
+</ul>
+<h3 id="restrictions">Restrictions</h3>
+<p>When creating packages the Registry imposes some restrictions on users:</p>
+<ul>
+<li>A package <strong>must have</strong> a name and a version at bare minimum</li>
+<li>No package can have the same name as another package</li>
+<li>A package can be published at one version <strong>only once</strong></li>
+<li>A package name must be all lowercase letters</li>
+</ul>
 
                     
                     </section>

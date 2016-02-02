@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Local Package Management | npm-like-im-5</title>
+        <title>Using npm Packages with Node.js | npm-like-im-5</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../using-packages/exercise3.html" />
+    <link rel="next" href="../using-packages/exercise2.html" />
     
     
-    <link rel="prev" href="../using-packages/exercise2.html" />
+    <link rel="prev" href="../using-packages/installing.html" />
     
 
         
@@ -49,11 +49,11 @@
         
         
     <div class="book"
-        data-level="4.4"
-        data-chapter-title="Local Package Management"
-        data-filepath="using-packages/local-mgmt.md"
+        data-level="4.3"
+        data-chapter-title="Using npm Packages with Node.js"
+        data-filepath="using-packages/node.md"
         data-basepath=".."
-        data-revision="Tue Feb 02 2016 06:12:32 GMT+0000 (UTC)"
+        data-revision="Tue Feb 02 2016 21:03:13 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -341,31 +341,31 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="using-packages/exercise2.html">
+        <li class="chapter active" data-level="4.3" data-path="using-packages/node.html">
+            
+                
+                    <a href="../using-packages/node.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Using npm Packages with Node.js
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="using-packages/exercise2.html">
             
                 
                     <a href="../using-packages/exercise2.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.3.</b>
-                        
-                        Exercise 2: Installing Packages Locally and Globally
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter active" data-level="4.4" data-path="using-packages/local-mgmt.html">
-            
-                
-                    <a href="../using-packages/local-mgmt.html">
-                
-                        <i class="fa fa-check"></i>
-                        
                             <b>4.4.</b>
                         
-                        Local Package Management
+                        Exercise 2: Installing and Using Packages in Node.js
                     </a>
             
             
@@ -778,7 +778,32 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="local-package-management">Local Package Management</h1>
+                        <h1 id="using-npm-packages-with-nodejs">Using npm Packages with Node.js</h1>
+<p>Now that we&apos;ve installed a package, let&apos;s learn how to use it
+in our Node.js application.</p>
+<h2 id="the-nodejs-require-function">The Node.js <code>require</code> function</h2>
+<p>If you recall from the beginning of this class, the Node.js module
+loader and npm co-evolved. That is to say, they were written with each
+other in mind.</p>
+<p>Node.js&apos; module loader uses a function called <code>require</code> that anticipates
+a <code>node_modules</code> directory. When you want to use a package you can type:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//index.js</span>
+
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mod-a&apos;</span>);
+</code></pre>
+<p>When Node.js sees this code, it will look for a <code>node_modules</code> directory,
+and then it will look for a <code>mod-a</code> directory inside. If it finds it, it
+will let you use the code from <code>mod-a</code> in your application. If it doesn&apos;t
+you&apos;ll get an error:</p>
+<pre><code>module.js:340
+    throw err;
+    ^
+
+Error: Cannot find module &apos;mod-a&apos;
+...
+</code></pre><p>When you see this error, it means that Node.js could not find your
+package. This mean you&apos;ll need to install it using the <code>npm install</code>
+command.</p>
 
                     
                     </section>
@@ -789,10 +814,10 @@
         </div>
 
         
-        <a href="../using-packages/exercise2.html" class="navigation navigation-prev " aria-label="Previous page: Exercise 2: Installing Packages Locally and Globally"><i class="fa fa-angle-left"></i></a>
+        <a href="../using-packages/installing.html" class="navigation navigation-prev " aria-label="Previous page: Installing Packages"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../using-packages/exercise3.html" class="navigation navigation-next " aria-label="Next page: Exercise 3: Debugging Missing Packages"><i class="fa fa-angle-right"></i></a>
+        <a href="../using-packages/exercise2.html" class="navigation navigation-next " aria-label="Next page: Exercise 2: Installing and Using Packages in Node.js"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -40,7 +40,7 @@
     <link rel="next" href="../using-packages/packagejson.html" />
     
     
-    <link rel="prev" href="../using-packages/local-mgmt.html" />
+    <link rel="prev" href="../using-packages/exercise2.html" />
     
 
         
@@ -53,7 +53,7 @@
         data-chapter-title="Exercise 3: Debugging Missing Packages"
         data-filepath="using-packages/exercise3.md"
         data-basepath=".."
-        data-revision="Tue Feb 02 2016 06:12:32 GMT+0000 (UTC)"
+        data-revision="Tue Feb 02 2016 21:03:13 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -341,31 +341,31 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="using-packages/exercise2.html">
+        <li class="chapter " data-level="4.3" data-path="using-packages/node.html">
+            
+                
+                    <a href="../using-packages/node.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Using npm Packages with Node.js
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="using-packages/exercise2.html">
             
                 
                     <a href="../using-packages/exercise2.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.3.</b>
-                        
-                        Exercise 2: Installing Packages Locally and Globally
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="using-packages/local-mgmt.html">
-            
-                
-                    <a href="../using-packages/local-mgmt.html">
-                
-                        <i class="fa fa-check"></i>
-                        
                             <b>4.4.</b>
                         
-                        Local Package Management
+                        Exercise 2: Installing and Using Packages in Node.js
                     </a>
             
             
@@ -779,6 +779,33 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="exercise-3-debugging-missing-packages">Exercise 3: Debugging Missing Packages</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>recognize the error message when your program is missing a package</li>
+<li>be able to fix the error by installing the necessary package</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>you should have Node.js &gt;= v4 installed</li>
+<li>you should have npm v2 or v3 installed</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<ol>
+<li>Create a directory called <code>exercise3</code></li>
+<li>Change into that directory using <code>cd exercise3</code></li>
+<li>Create a file called <code>index.js</code></li>
+<li><p>Cut and paste this code into <code>index.js</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> _ =  <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;lodash&apos;</span>);
+</code></pre>
+</li>
+<li>Run your program.</li>
+<li>Fix the error!</li>
+</ol>
+<h2 id="hints">Hints</h2>
+<ul>
+<li>You can run a Node.js program by typing <code>node &lt;js-file-name</code> where 
+<code>js-file-name</code> is the name of a <code>.js</code> file, e.g. <code>index</code>, <code>index.js</code></li>
+</ul>
 
                     
                     </section>
@@ -789,7 +816,7 @@
         </div>
 
         
-        <a href="../using-packages/local-mgmt.html" class="navigation navigation-prev " aria-label="Previous page: Local Package Management"><i class="fa fa-angle-left"></i></a>
+        <a href="../using-packages/exercise2.html" class="navigation navigation-prev " aria-label="Previous page: Exercise 2: Installing and Using Packages in Node.js"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../using-packages/packagejson.html" class="navigation navigation-next " aria-label="Next page: Using a `package.json`"><i class="fa fa-angle-right"></i></a>
