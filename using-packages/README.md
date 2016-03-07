@@ -11,4 +11,4 @@ In this section, we'll learn
 - What the Registry is and how it stores packages
 - How to install a package and use it, both globally and locally
 - How npm manages packages on our machines
-- How to use a `package.json` to manage pacakges as dependencies
+- How to use a `package.json` to manage packages as dependencies
