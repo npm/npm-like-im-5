@@ -24,12 +24,12 @@ The registry is a database (actually serveral databases!) that contains
 all package data and meta-data.
 
 When one types `npm install` (among other things!) a request is made to
-the registry. 
+the registry.
 
 It is possible to use the npm CLI with *any* registry. The npm registry
 is simply the default.
 
-### npm Onsite
+### npm OnSite
 
 npm OnSite is a paid product by which npm provides customers
 with a fully replicated version of the public registry for use

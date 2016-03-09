@@ -7,7 +7,7 @@ a classically "non-technical" audience.
 
 ## up and running
 
-### prerequisities
+### prerequisites
 
 `npm-like-im-5` is a [Node.js] project. you can install
 Node.js [here][1].

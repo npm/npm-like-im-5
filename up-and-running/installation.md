@@ -6,7 +6,7 @@ Let's get up and running with Node.js and npm.
 
 Node.js is the runtime environment for developing server-side Web Applications in JavaScript.
 
-You can test and see if you alrady have node installed on your machine
+You can test and see if you already have node installed on your machine
 by opening your terminal and typing:
 
 ```
@@ -38,5 +38,5 @@ It is worth noting that npm gets updated more frequently than Node does, so you'
 
 `npm install npm@latest -g`
 
-[nvm]: https://github.com/creationix/nvm 
+[nvm]: https://github.com/creationix/nvm
 [nodist]: https://github.com/marcelklehr/nodist
