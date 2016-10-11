@@ -14,7 +14,7 @@ node -v
 ```
 
 Any version higher than `v0.10.32` will work, but we strongly recommend
-that you use `v4` (LTS) or `v5` (current).
+that you use `v4` (LTS) or `v6` (current).
 
 Node.js provides installers for Windows, OS X, and Linux on
 [http://www.nodejs.org]. However, the best way to install Node.js is

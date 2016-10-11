@@ -10,7 +10,7 @@ default files are named the way they are.
 
 - A **package** is a file or directory that is described by a `package.json`.
   This can happen in a bunch of different ways! For more info, see
-  ["What is a `package`?](#what-is-a-package), below.
+  ["What is a `package`?"](#what-is-a-package), below.
 - A **module** is any file or directory that can be loaded by Node.js'
   `require()`. Again, there are several configurations that allow this to
   happen. For more info, see ["What is a `module`?"](#what-is-a-module), below.

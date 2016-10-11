@@ -11,7 +11,7 @@ The CLI command to install a package is:
 ```
 npm install <package-name>@<version>
 ```
-... where `package-name` is the name of the package, and `version`
+… where `package-name` is the name of the package, and `version`
 is the version number you would like to install. Version number is 
 optional. If you don't pass it, npm will simply install the most recent 
 published version.
@@ -28,7 +28,7 @@ For example, if I wanted to install `mod-a` I would type:
 npm install mod-a
 ```
 
-..which would install `mod-a` at the most recent version.
+… which would install `mod-a` at the most recent version.
 
 If I wanted to install `mod-a` but specifically version `1.0` I would
 type:
@@ -50,7 +50,7 @@ terminal, inside that directory, I run:
 $ ~/Projects/my-project/>  npm install mod-a@1.0
 ```
 
-... npm will go to the Registry and install `mod-a` here:
+… npm will go to the Registry and install `mod-a` here:
 
 ```
 Projects
