@@ -1,784 +1,734 @@
+
 <!DOCTYPE HTML>
-<html lang="en" >
-    
+<html lang="" >
     <head>
-        
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Up and Running | npm-like-im-5</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Up and Running · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
-        <meta name="HandheldFriendly" content="true"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
+    
     <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+    
         
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+    
         
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
-        
     
+        
     
 
         
     
     
-    <link rel="next" href="../up-and-running/installation.html" />
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="installation.html" />
     
     
     <link rel="prev" href="../npm3/non-determinism.html" />
     
 
-        
     </head>
     <body>
         
+<div class="book">
+    <div class="book-summary">
         
-    <div class="book"
-        data-level="3"
-        data-chapter-title="Up and Running"
-        data-filepath="up-and-running/README.md"
-        data-basepath=".."
-        data-revision="Wed Mar 09 2016 00:03:03 GMT+0000 (UTC)"
-        data-innerlanguage="">
-    
-
-<div class="book-summary">
-    <nav role="navigation">
-        <ul class="summary">
             
-            
-            
-            
-
-            
-
-            
-    
-        <li class="chapter " data-level="0" data-path="index.html">
-            
-                
-                    <a href="../index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                        Introduction
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1" data-path="intro/index.html">
-            
-                
-                    <a href="../intro/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.</b>
-                        
-                        Introduction
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.1" data-path="intro/what-is-npm.html">
-            
-                
-                    <a href="../intro/what-is-npm.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.1.</b>
-                        
-                        What is npm?
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="intro/app-design.html">
-            
-                
-                    <a href="../intro/app-design.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.2.</b>
-                        
-                        Modularity and Application Design
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="intro/packages-and-modules.html">
-            
-                
-                    <a href="../intro/packages-and-modules.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.3.</b>
-                        
-                        Packages and Modules
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="intro/dependency-hell.html">
-            
-                
-                    <a href="../intro/dependency-hell.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.4.</b>
-                        
-                        Package Managers and Dependency Hell
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="intro/history.html">
-            
-                
-                    <a href="../intro/history.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.5.</b>
-                        
-                        The Node Module Loader and npm2
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="2" data-path="npm3/index.html">
-            
-                
-                    <a href="../npm3/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.</b>
-                        
-                        Hello, npm!
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="2.1" data-path="npm3/dependency-resolution.html">
-            
-                
-                    <a href="../npm3/dependency-resolution.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.1.</b>
-                        
-                        Dependency Resolution
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="npm3/duplication.html">
-            
-                
-                    <a href="../npm3/duplication.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.2.</b>
-                        
-                        Duplication and Deduping
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="npm3/non-determinism.html">
-            
-                
-                    <a href="../npm3/non-determinism.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.3.</b>
-                        
-                        Non-determinism
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter active" data-level="3" data-path="up-and-running/index.html">
-            
-                
-                    <a href="../up-and-running/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                        Up and Running
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="3.1" data-path="up-and-running/installation.html">
-            
-                
-                    <a href="../up-and-running/installation.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.1.</b>
-                        
-                        Installing Node.js and npm
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="up-and-running/exercise1.html">
-            
-                
-                    <a href="../up-and-running/exercise1.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.2.</b>
-                        
-                        Exercise 1: Changing versions of npm
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="4" data-path="using-packages/index.html">
-            
-                
-                    <a href="../using-packages/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.</b>
-                        
-                        Using Packages
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="4.1" data-path="using-packages/registry.html">
-            
-                
-                    <a href="../using-packages/registry.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.1.</b>
-                        
-                        The Registry
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="using-packages/installing.html">
-            
-                
-                    <a href="../using-packages/installing.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.2.</b>
-                        
-                        Installing Packages
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="using-packages/node.html">
-            
-                
-                    <a href="../using-packages/node.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.3.</b>
-                        
-                        Using npm Packages with Node.js
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="using-packages/exercise2.html">
-            
-                
-                    <a href="../using-packages/exercise2.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.4.</b>
-                        
-                        Exercise 2: Installing and Using Packages in Node.js
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5" data-path="using-packages/exercise3.html">
-            
-                
-                    <a href="../using-packages/exercise3.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.5.</b>
-                        
-                        Exercise 3: Debugging Missing Packages
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.6" data-path="using-packages/packagejson.html">
-            
-                
-                    <a href="../using-packages/packagejson.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.6.</b>
-                        
-                        Using a `package.json`
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.7" data-path="using-packages/exercise4.html">
-            
-                
-                    <a href="../using-packages/exercise4.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.7.</b>
-                        
-                        Exercise 4: A Static Site, with npm
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="5" data-path="semver/index.html">
-            
-                
-                    <a href="../semver/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.</b>
-                        
-                        Semantic Versioning (Semver)
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.1" data-path="semver/ranges.html">
-            
-                
-                    <a href="../semver/ranges.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.1.</b>
-                        
-                        Version Ranges
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="semver/exercise5.html">
-            
-                
-                    <a href="../semver/exercise5.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.2.</b>
-                        
-                        Exercise 5: Specifying Version Ranges in `package.json`
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" data-path="semver/majorminorpatch.html">
-            
-                
-                    <a href="../semver/majorminorpatch.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.3.</b>
-                        
-                        Major.Minor.Patch
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="semver/exercise6.html">
-            
-                
-                    <a href="../semver/exercise6.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.4.</b>
-                        
-                        Exercise 6: Release Manager Role Playing
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="publishing/index.html">
-            
-                
-                    <a href="../publishing/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.</b>
-                        
-                        Publishing a Package
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="6.1" data-path="publishing/publishing.html">
-            
-                
-                    <a href="../publishing/publishing.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.1.</b>
-                        
-                        Publishing Workflow
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2" data-path="publishing/exercise7.html">
-            
-                
-                    <a href="../publishing/exercise7.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.2.</b>
-                        
-                        Exercise 7: Our First Package!
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.3" data-path="publishing/teams-orgs.html">
-            
-                
-                    <a href="../publishing/teams-orgs.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.3.</b>
-                        
-                        Private Packages, Teams, and Orgs
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="7" data-path="run-scripts/index.html">
-            
-                
-                    <a href="../run-scripts/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        Run Scripts
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="7.1" data-path="run-scripts/intro.html">
-            
-                
-                    <a href="../run-scripts/intro.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.1.</b>
-                        
-                        What are run scripts?
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7.2" data-path="run-scripts/start-and-test.html">
-            
-                
-                    <a href="../run-scripts/start-and-test.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.2.</b>
-                        
-                        `start` and `test`
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7.3" data-path="run-scripts/exercise8.html">
-            
-                
-                    <a href="../run-scripts/exercise8.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.3.</b>
-                        
-                        Exercise 8: Writing a `start` script
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7.4" data-path="run-scripts/custom.html">
-            
-                
-                    <a href="../run-scripts/custom.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.4.</b>
-                        
-                        Custom Run Scripts
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7.5" data-path="run-scripts/exercise9.html">
-            
-                
-                    <a href="../run-scripts/exercise9.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.5.</b>
-                        
-                        Exercise 9: Writing a custom `build` script
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7.6" data-path="run-scripts/lifecycle-events.html">
-            
-                
-                    <a href="../run-scripts/lifecycle-events.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.6.</b>
-                        
-                        Lifecycle Events
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7.7" data-path="run-scripts/exercise10.html">
-            
-                
-                    <a href="../run-scripts/exercise10.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.7.</b>
-                        
-                        Exercise 10: Writing a `prepublish` script
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="8" data-path="conclusion/index.html">
-            
-                
-                    <a href="../conclusion/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.</b>
-                        
-                        Conclusion
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="8.1" data-path="conclusion/summary.html">
-            
-                
-                    <a href="../conclusion/summary.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.1.</b>
-                        
-                        Summary
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.2" data-path="conclusion/next-steps.html">
-            
-                
-                    <a href="../conclusion/next-steps.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.2.</b>
-                        
-                        Next Steps
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-
-            
-            <li class="divider"></li>
-            <li>
-                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                    Published with GitBook
-                </a>
-            </li>
-            
-        </ul>
-    </nav>
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
 </div>
 
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../intro/">
+            
+                <a href="../intro/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../intro/what-is-npm.html">
+            
+                <a href="../intro/what-is-npm.html">
+            
+                    
+                    What is npm?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../intro/app-design.html">
+            
+                <a href="../intro/app-design.html">
+            
+                    
+                    Modularity and Application Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../intro/packages-and-modules.html">
+            
+                <a href="../intro/packages-and-modules.html">
+            
+                    
+                    Packages and Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../intro/dependency-hell.html">
+            
+                <a href="../intro/dependency-hell.html">
+            
+                    
+                    Package Managers and Dependency Hell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../intro/history.html">
+            
+                <a href="../intro/history.html">
+            
+                    
+                    The Node Module Loader and npm2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../npm3/">
+            
+                <a href="../npm3/">
+            
+                    
+                    Hello, npm!
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../npm3/dependency-resolution.html">
+            
+                <a href="../npm3/dependency-resolution.html">
+            
+                    
+                    Dependency Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../npm3/duplication.html">
+            
+                <a href="../npm3/duplication.html">
+            
+                    
+                    Duplication and Deduping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../npm3/non-determinism.html">
+            
+                <a href="../npm3/non-determinism.html">
+            
+                    
+                    Non-determinism
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Up and Running
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installing Node.js and npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="exercise1.html">
+            
+                <a href="exercise1.html">
+            
+                    
+                    Exercise 1: Changing versions of npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../using-packages/">
+            
+                <a href="../using-packages/">
+            
+                    
+                    Using Packages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../using-packages/registry.html">
+            
+                <a href="../using-packages/registry.html">
+            
+                    
+                    The Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../using-packages/installing.html">
+            
+                <a href="../using-packages/installing.html">
+            
+                    
+                    Installing Packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../using-packages/node.html">
+            
+                <a href="../using-packages/node.html">
+            
+                    
+                    Using npm Packages with Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../using-packages/exercise2.html">
+            
+                <a href="../using-packages/exercise2.html">
+            
+                    
+                    Exercise 2: Installing and Using Packages in Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../using-packages/exercise3.html">
+            
+                <a href="../using-packages/exercise3.html">
+            
+                    
+                    Exercise 3: Debugging Missing Packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../using-packages/packagejson.html">
+            
+                <a href="../using-packages/packagejson.html">
+            
+                    
+                    Using a package.json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../using-packages/exercise4.html">
+            
+                <a href="../using-packages/exercise4.html">
+            
+                    
+                    Exercise 4: A Static Site, with npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../semver/">
+            
+                <a href="../semver/">
+            
+                    
+                    Semantic Versioning (Semver)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../semver/ranges.html">
+            
+                <a href="../semver/ranges.html">
+            
+                    
+                    Version Ranges
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../semver/exercise5.html">
+            
+                <a href="../semver/exercise5.html">
+            
+                    
+                    Exercise 5: Specifying Version Ranges in package.json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../semver/majorminorpatch.html">
+            
+                <a href="../semver/majorminorpatch.html">
+            
+                    
+                    Major.Minor.Patch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../semver/exercise6.html">
+            
+                <a href="../semver/exercise6.html">
+            
+                    
+                    Exercise 6: Release Manager Role Playing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../publishing/">
+            
+                <a href="../publishing/">
+            
+                    
+                    Publishing a Package
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../publishing/publishing.html">
+            
+                <a href="../publishing/publishing.html">
+            
+                    
+                    Publishing Workflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../publishing/exercise7.html">
+            
+                <a href="../publishing/exercise7.html">
+            
+                    
+                    Exercise 7: Our First Package!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../publishing/teams-orgs.html">
+            
+                <a href="../publishing/teams-orgs.html">
+            
+                    
+                    Private Packages, Teams, and Orgs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../run-scripts/">
+            
+                <a href="../run-scripts/">
+            
+                    
+                    Run Scripts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../run-scripts/intro.html">
+            
+                <a href="../run-scripts/intro.html">
+            
+                    
+                    What are run scripts?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../run-scripts/start-and-test.html">
+            
+                <a href="../run-scripts/start-and-test.html">
+            
+                    
+                    start and test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../run-scripts/exercise8.html">
+            
+                <a href="../run-scripts/exercise8.html">
+            
+                    
+                    Exercise 8: Writing a start script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../run-scripts/custom.html">
+            
+                <a href="../run-scripts/custom.html">
+            
+                    
+                    Custom Run Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../run-scripts/exercise9.html">
+            
+                <a href="../run-scripts/exercise9.html">
+            
+                    
+                    Exercise 9: Writing a custom build script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../run-scripts/lifecycle-events.html">
+            
+                <a href="../run-scripts/lifecycle-events.html">
+            
+                    
+                    Lifecycle Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../run-scripts/exercise10.html">
+            
+                <a href="../run-scripts/exercise10.html">
+            
+                    
+                    Exercise 10: Writing a prepublish script
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../conclusion/">
+            
+                <a href="../conclusion/">
+            
+                    
+                    Conclusion
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../conclusion/summary.html">
+            
+                <a href="../conclusion/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../conclusion/next-steps.html">
+            
+                <a href="../conclusion/next-steps.html">
+            
+                    
+                    Next Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
     <div class="book-body">
-        <div class="body-inner">
-            <div class="book-header" role="navigation">
-    <!-- Actions Left -->
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
     
 
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >npm-like-im-5</a>
+        <a href=".." >Up and Running</a>
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1" role="main">
-                <div class="page-inner">
-                
-                
-                    <section class="normal" id="section-">
-                    
-                        <h1 id="up-and-running">Up and Running</h1>
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="up-and-running">Up and Running</h1>
 <p>Understanding how something works is wonderful, but
 it is no replacement for practical hands-on experience.
 Let&apos;s get a Node.js development environment set up on 
@@ -791,50 +741,82 @@ our computers so that we can start working with npm.</p>
 <li>How to update npm</li>
 </ul>
 
-                    
-                    </section>
-                
-                
-                </div>
-            </div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
         </div>
-
-        
-        <a href="../npm3/non-determinism.html" class="navigation navigation-prev " aria-label="Previous page: Non-determinism"><i class="fa fa-angle-left"></i></a>
-        
-        
-        <a href="../up-and-running/installation.html" class="navigation navigation-next " aria-label="Next page: Installing Node.js and npm"><i class="fa fa-angle-right"></i></a>
-        
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
     </div>
 </div>
 
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../npm3/non-determinism.html" class="navigation navigation-prev " aria-label="Previous page: Non-determinism">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="installation.html" class="navigation navigation-next " aria-label="Next page: Installing Node.js and npm">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
         
-<script src="../gitbook/app.js"></script>
+    </div>
 
-    
-    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
-    
-
-<script>
-require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
-    gitbook.start(config);
-});
-</script>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Up and Running","level":"1.4","depth":1,"next":{"title":"Installing Node.js and npm","level":"1.4.1","depth":2,"path":"up-and-running/installation.md","ref":"up-and-running/installation.md","articles":[]},"previous":{"title":"Non-determinism","level":"1.3.3","depth":2,"path":"npm3/non-determinism.md","ref":"npm3/non-determinism.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"up-and-running/README.md","mtime":"2016-10-11T18:12:56.107Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-11T18:13:44.451Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
 
         
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
     </body>
-    
 </html>
+
