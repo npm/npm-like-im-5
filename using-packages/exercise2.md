@@ -17,7 +17,7 @@
 3. Install the `my-first-mod`
 4. Create a file called `index.js`
 5. Use the `my-first-mod` to add the numbers 3 and 4
-6. Use the `my-first-mod` to have the console print "Hello, <your name>!"
+6. Use the `my-first-mod` to have the console print `Hello, <your name>!`
 
 ## Hints
 

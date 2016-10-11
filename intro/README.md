@@ -4,7 +4,7 @@ Welcome to npm-like-im-5! In this section, we'll take a look at the Node.js ecos
 
 ## Learning Objectives
 
-In this seciton we'll learn:
+In this section we'll learn:
 
 - how npm came to be a product, and then a company
 - what motivated the desire for a product like npm
